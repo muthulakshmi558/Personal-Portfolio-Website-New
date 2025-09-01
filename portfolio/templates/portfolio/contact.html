@@ -1,0 +1,30 @@
+{% extends 'portfolio/Layout/base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<section class="contact-section">
+  <div class="contact-container">
+    <h1 class="contact-title">Get in Touch</h1>
+    <p class="contact-subtitle">Have a project or question? Fill out the form below 👇</p>
+
+    <form method="post" class="contact-form">
+      {% csrf_token %}
+      <div class="form-group">
+        {{ form.name.label_tag }}
+        {{ form.name }}
+      </div>
+      <div class="form-group">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+      </div>
+      <div class="form-group">
+        {{ form.message.label_tag }}
+        {{ form.message }}
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

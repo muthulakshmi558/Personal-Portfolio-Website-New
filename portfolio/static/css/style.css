@@ -1,0 +1,106 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #333, #111);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero .highlight {
+    color: #ff9800;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-primary {
+    background: #ff9800;
+    color: white;
+}
+.btn-secondary {
+    background: #555;
+    color: white;
+}
+.btn-primary:hover {
+    background: #e68900;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-8px);
+}
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.project-info {
+    padding: 15px;
+}
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #333;
+}
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Skills */
+.skills-list {
+    max-width: 600px;
+    margin: auto;
+}
+.skill-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.skill-item span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 8px;
+    height: 10px;
+    width: 100%;
+}
+.progress {
+    background: #ff9800;
+    height: 100%;
+    border-radius: 8px;
+}

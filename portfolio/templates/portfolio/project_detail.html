@@ -1,0 +1,38 @@
+{% extends 'portfolio/Layout/base.html' %}
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto p-6">
+    <!-- Card -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+        
+        <!-- Image -->
+        <div class="w-full h-80 overflow-hidden">
+            <img src="{{ project.image.url }}" alt="{{ project.title }}" 
+                 class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        
+        <!-- Content -->
+        <div class="p-6 space-y-4">
+            <h1 class="text-3xl font-bold text-gray-800">{{ project.title }}</h1>
+            <p class="text-gray-600 leading-relaxed">{{ project.description }}</p>
+            
+            <!-- Visit Project Link -->
+            {% if project.link %}
+                <a href="{{ project.link }}" target="_blank"
+                   class="inline-block px-6 py-2 text-white bg-purple-600 rounded-lg shadow hover:bg-purple-700 transition duration-300">
+                    🚀 Visit Project
+                </a>
+            {% endif %}
+            
+            <!-- Back Button -->
+            <div class="mt-4">
+                <a href="{% url 'project-list' %}"
+                   class="inline-block px-5 py-2 text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition duration-300">
+                    ⬅ Back to Projects
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
